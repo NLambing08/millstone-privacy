@@ -134,5 +134,5 @@ Questions about this Privacy Policy or your data:
 
 **support@little-lamb-dev.com**
 
-Millstone / Nolan Lambing  
+Millstone  
 Distributed via the Apple App Store
