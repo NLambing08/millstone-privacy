@@ -48,7 +48,7 @@ The App also stores some data locally on your device (not uploaded to our server
 - Nightly Examen completion markers
 - Home-screen guidance preferences (for example dismissing “Start here”)
 - Widget snapshot data shared with the Millstone widget via an App Group
-- The **confession preparation vault**: notes you write for examination of conscience are encrypted on-device with a password you choose and are **not** uploaded to our servers
+- The **confession preparation vault**: notes you write for examination of conscience are encrypted on-device with a password you choose and are **not** uploaded to our servers. You may optionally unlock the vault with **Face ID**, **Touch ID**, or **Optic ID** on this device; biometrics stay on-device via Apple’s secure enclave and are never sent to Millstone servers.
 
 Local data can be lost if you delete the App, clear App data, lose the device, forget the vault password, or experience device failure. **Keep your own backups** of anything you cannot afford to lose. We are not responsible for loss of local-only data.
 
