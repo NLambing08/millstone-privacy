@@ -1,5 +1,7 @@
-# Millstone Privacy Policy
+# Millstone web
 
-Public privacy policy for the Millstone iOS app (App Store Connect).
+Public site for the Millstone iOS app.
 
-**Live page:** https://nlambing08.github.io/millstone-privacy/
+- Privacy policy: https://millstone.little-lamb-dev.com/
+- Shared Rule landing page (iMessage / Universal Links): https://millstone.little-lamb-dev.com/r/
+- Apple App Site Association: https://millstone.little-lamb-dev.com/.well-known/apple-app-site-association

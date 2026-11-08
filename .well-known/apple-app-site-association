@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "RKPN57CQCC.com.nolan.Ascesis",
+        "paths": ["/r", "/r/", "/r/*"]
+      }
+    ]
+  }
+}

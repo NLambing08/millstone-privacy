@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Open in Millstone</title>
+  <meta name="description" content="A shared Rule of Life from Millstone. Tap to open in the app." />
+
+  <!-- iMessage / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Millstone" />
+  <meta property="og:title" content="Millstone Rule of Life" />
+  <meta property="og:description" content="Someone shared a Rule of Life with you. Tap to open it in Millstone." />
+  <meta property="og:url" content="https://millstone.little-lamb-dev.com/r/" />
+  <meta property="og:image" content="https://millstone.little-lamb-dev.com/og-share.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="1200" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Millstone Rule of Life" />
+  <meta name="twitter:description" content="Someone shared a Rule of Life with you. Tap to open it in Millstone." />
+  <meta name="twitter:image" content="https://millstone.little-lamb-dev.com/og-share.png" />
+
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <style>
+    :root {
+      --ink: #291f1a;
+      --muted: #66574a;
+      --wine: #6b2430;
+      --parchment: #f5ede0;
+      --card: #fbf7ef;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--parchment);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    main {
+      width: 100%;
+      max-width: 26rem;
+      background: var(--card);
+      border-radius: 20px;
+      padding: 1.75rem 1.5rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(41, 31, 26, 0.08);
+    }
+    img.icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    h1 {
+      font-size: 1.55rem;
+      margin: 0 0 0.5rem;
+      color: var(--wine);
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 1.02rem;
+    }
+    a.button, button.button {
+      appearance: none;
+      border: 0;
+      display: inline-block;
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border-radius: 12px;
+      background: var(--wine);
+      color: #fff;
+      font: inherit;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    a.button:active, button.button:active { opacity: 0.9; }
+    .hint {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .error {
+      color: var(--wine);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="icon" src="/og-share.png" alt="Millstone" width="88" height="88" />
+    <h1 id="title">Millstone Rule of Life</h1>
+    <p id="message">Someone shared a Rule of Life with you. Open it in the Millstone app.</p>
+    <a class="button" id="open" href="#">Open in Millstone</a>
+    <p class="hint" id="hint">If nothing happens, install Millstone from the App Store, then tap again.</p>
+  </main>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var version = params.get("v") || "1";
+      var token = params.get("d");
+      var name = params.get("n");
+      var open = document.getElementById("open");
+      var message = document.getElementById("message");
+      var title = document.getElementById("title");
+      var hint = document.getElementById("hint");
+
+      if (name && name.trim()) {
+        title.textContent = name.trim();
+        document.title = name.trim() + " · Millstone";
+      }
+
+      if (!token) {
+        message.innerHTML = '<span class="error">This share link is missing its Rule data.</span>';
+        open.style.display = "none";
+        hint.textContent = "Ask the sender to share the Rule again from Millstone.";
+        return;
+      }
+
+      var deepLink =
+        "ascesis://share/rule?v=" +
+        encodeURIComponent(version) +
+        "&d=" +
+        encodeURIComponent(token);
+
+      open.setAttribute("href", deepLink);
+
+      function tryOpen() {
+        window.location.href = deepLink;
+      }
+
+      open.addEventListener("click", function (event) {
+        // Let the href work; also force navigation for stubborn browsers.
+        event.preventDefault();
+        tryOpen();
+      });
+
+      // Auto-open when arriving from Messages / Safari if Millstone is installed.
+      var auto = params.get("auto");
+      if (auto !== "0") {
+        setTimeout(tryOpen, 250);
+      }
+    })();
+  </script>
+</body>
+</html>
