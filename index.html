@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy · Millstone</title>
+  <link rel="canonical" href="https://millstone.little-lamb-dev.com/" />
+  <meta name="description" content="Privacy Policy for the Millstone iOS app." />
   <style>
     :root {
       --ink: #291f1a;
@@ -63,6 +65,17 @@
     th { color: var(--wine); }
     strong { font-weight: 600; }
     a { color: var(--wine); }
+    .notice {
+      background: var(--card);
+      border: 1px solid rgba(107, 36, 48, 0.18);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      margin: 1.25rem 0 1.75rem;
+    }
+    .notice h2 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
     footer {
       margin-top: 2.5rem;
       padding-top: 1rem;
@@ -75,11 +88,22 @@
 <body>
   <main>
     <h1>Privacy Policy for Millstone</h1>
-    <p class="meta">Effective date: November 6, 2026</p>
+    <p class="meta">Effective date: November 7, 2026</p>
 
     <p>Millstone (“the App”) is a Catholic rule-of-life and prayer app. This Privacy Policy explains what information the App collects, how it is used, and the choices you have.</p>
-    <p>This document is provided to help meet App Store requirements. It is not legal advice.</p>
+    <p><strong>This document is not legal advice.</strong> It describes our practices and helps meet App Store requirements. Consider having qualified counsel review it.</p>
     <p><strong>Developer contact:</strong> <a href="mailto:support@little-lamb-dev.com">support@little-lamb-dev.com</a></p>
+    <p><strong>This page:</strong> <a href="https://millstone.little-lamb-dev.com/">https://millstone.little-lamb-dev.com/</a></p>
+
+    <div class="notice">
+      <h2>Important notices</h2>
+      <ul>
+        <li><strong>Not the Sacrament of Confession.</strong> Examination tools and the confession preparation vault are private preparation aids only. They are not sacramental confession, are not heard by a priest in the App, and are not protected by the sacramental seal.</li>
+        <li><strong>Not pastoral, medical, or legal advice.</strong> Content is for personal devotion and education only.</li>
+        <li><strong>Service as available.</strong> The App may be interrupted, changed, or discontinued. We do not guarantee uninterrupted or error-free operation.</li>
+        <li><strong>You control what you share.</strong> Shared templates, links, and screenshots leave your device by your choice. Do not include sensitive information you are unwilling to share.</li>
+      </ul>
+    </div>
 
     <h2>1. Information we collect</h2>
 
@@ -91,10 +115,10 @@
       <li>Password (stored by our authentication provider in hashed form; we cannot read your password)</li>
       <li>Display name (optional / as provided)</li>
     </ul>
-    <p>Account authentication and cloud sync are provided by <strong>Supabase</strong>. Creating an account lets you upload on-device data to your cloud account for sync.</p>
+    <p>Account authentication and cloud sync are provided by <strong>Supabase</strong> (<a href="https://supabase.com/privacy" rel="noopener noreferrer">Privacy Policy</a>). Creating an account lets you upload on-device Rule of Life data to your cloud account for sync.</p>
 
     <h3>Rule of Life and check-ins</h3>
-    <p>If you use Rule of Life features, we store on our servers:</p>
+    <p>If you use Rule of Life features with an account, we store on our servers:</p>
     <ul>
       <li>Practice titles, notes, schedule (weekdays / preferred times)</li>
       <li>Daily check-in status (for example Kept / In part / Not kept) and related timestamps</li>
@@ -110,15 +134,16 @@
       <li>Widget snapshot data shared with the Millstone widget via an App Group</li>
       <li>The <strong>confession preparation vault</strong>: notes you write for examination of conscience are encrypted on-device with a password you choose and are <strong>not</strong> uploaded to our servers</li>
     </ul>
+    <p>Local data can be lost if you delete the App, clear data, lose the device, forget the vault password, or experience device failure. <strong>Keep your own backups</strong> of anything you cannot afford to lose. We are not responsible for loss of local-only data.</p>
 
     <h3>Purchases</h3>
-    <p>Optional tips / donations are processed by <strong>Apple</strong> through In-App Purchase. We do not receive your full payment card details. Apple’s privacy policy applies to payment processing.</p>
+    <p>Optional tips are processed by <strong>Apple</strong> through In-App Purchase. Tips are voluntary and do not unlock required features. We do not receive your full payment card details. Purchases, billing, and refunds are handled under Apple’s terms and <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple’s Privacy Policy</a>.</p>
 
     <h3>Notifications</h3>
     <p>If you enable reminders, the App schedules <strong>local notifications</strong> on your device (practice times, liturgical reminders, Examen nudge). Notification permission is optional. These reminders are generated on-device and do not require sending your prayer content to a push server operated by us.</p>
 
     <h3>Diagnostics</h3>
-    <p>We do not currently integrate third-party advertising or analytics SDKs. Apple and your device may collect standard crash or performance data according to your system settings and Apple’s policies.</p>
+    <p>We do not currently integrate third-party advertising or analytics SDKs. Apple and your device may collect standard crash or performance data according to your system settings and <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple’s Privacy Policy</a>.</p>
 
     <h2>2. How we use information</h2>
     <p>We use the information above to:</p>
@@ -137,46 +162,55 @@
     <p>We share information only as needed to operate the App:</p>
     <table>
       <thead>
-        <tr><th>Recipient</th><th>Purpose</th></tr>
+        <tr><th>Recipient</th><th>Purpose</th><th>Privacy info</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Supabase</strong></td><td>Account authentication and storage of Rule of Life practices / check-ins / profile</td></tr>
-        <tr><td><strong>Apple</strong></td><td>App distribution, In-App Purchases, and platform services</td></tr>
+        <tr>
+          <td><strong>Supabase</strong></td>
+          <td>Account authentication and storage of Rule of Life practices / check-ins / profile</td>
+          <td><a href="https://supabase.com/privacy" rel="noopener noreferrer">supabase.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Apple</strong></td>
+          <td>App distribution, In-App Purchases, and platform services</td>
+          <td><a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">apple.com/legal/privacy</a></td>
+        </tr>
       </tbody>
     </table>
     <p>We may disclose information if required by law, or to protect rights, safety, or the integrity of the App.</p>
-    <p>External links (for example USCCB Mass readings or other Catholic resources) open third-party sites. Those sites have their own privacy policies.</p>
+    <p>External links (for example USCCB Mass readings, Divine Office, or other Catholic resources) open third-party sites. Those sites have their own privacy policies; we are not responsible for their content or practices.</p>
 
     <h2>4. Data retention</h2>
     <ul>
       <li>Account and cloud Rule of Life data are retained while your account remains active.</li>
-      <li>If you delete your account in the App, we delete your authentication account and associated server-side practices, check-ins, and profile data (subject to normal backup cycles).</li>
-      <li>Local-only data is removed from that device when you delete your account in the App, or when you delete the App (except data Apple retains under its own policies).</li>
+      <li>If you delete your account in the App, we delete your authentication account and associated server-side practices, check-ins, and profile data (subject to normal backup cycles of our providers).</li>
+      <li>Local-only data is removed from that device when you delete your account in the App (where applicable), clear local data, or delete the App (except data Apple or your device retains under their own policies).</li>
       <li>Encrypted confession notes remain on the device until you reset/clear the vault or remove the App.</li>
+      <li>After account deletion requests, residual copies may briefly remain in encrypted backups until those backups rotate.</li>
     </ul>
 
     <h2>5. Your choices</h2>
     <ul>
       <li><strong>Access / update:</strong> You can update your display name in Account settings.</li>
       <li><strong>Sign out:</strong> Available in Account settings.</li>
-      <li><strong>Delete account:</strong> Available in Account settings. This permanently deletes your Millstone account and server-side Rule of Life data.</li>
+      <li><strong>Delete account:</strong> Available in Account settings. This permanently deletes your Millstone account and server-side Rule of Life data (subject to the retention notes above).</li>
       <li><strong>Password reset:</strong> Available from the sign-in screen.</li>
       <li><strong>Notifications:</strong> You can enable or disable reminders in the App and in iOS Settings.</li>
-      <li><strong>Confession vault:</strong> Protected by a password you set; you can clear or reset the vault in the App.</li>
+      <li><strong>Confession vault:</strong> Protected by a password you set; you can clear or reset the vault in the App. If you forget the password, we cannot recover the vault contents.</li>
     </ul>
-    <p>To request help with deletion or privacy questions, contact the developer using the support email listed above or in App Store Connect.</p>
+    <p>To request help with deletion or privacy questions, contact <a href="mailto:support@little-lamb-dev.com">support@little-lamb-dev.com</a>.</p>
 
     <h2>6. Children’s privacy</h2>
     <p>The App is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided personal information, contact us and we will take steps to delete it.</p>
 
     <h2>7. Security</h2>
-    <p>We use industry-standard providers and transport encryption (HTTPS) for account and cloud sync. Confession preparation notes are encrypted on-device. No method of transmission or storage is 100% secure.</p>
+    <p>We use industry-standard providers and transport encryption (HTTPS) for account and cloud sync. Confession preparation notes are encrypted on-device. <strong>No method of transmission or storage is 100% secure.</strong> You are responsible for keeping your device, Apple ID, account password, and vault password secure.</p>
 
     <h2>8. International users</h2>
-    <p>If you use the App outside the country where our infrastructure is hosted, your information may be processed in the United States or other locations where our service providers operate.</p>
+    <p>If you use the App outside the country where our infrastructure is hosted, your information may be processed in the United States or other locations where our service providers operate. By using the App, you understand that your information may be transferred to those locations.</p>
 
     <h2>9. Changes to this policy</h2>
-    <p>We may update this Privacy Policy from time to time. The “Effective date” at the top will change when we do. Continued use of the App after an update means you accept the revised policy.</p>
+    <p>We may update this Privacy Policy from time to time. The “Effective date” at the top will change when we do. The current version is posted at <a href="https://millstone.little-lamb-dev.com/">https://millstone.little-lamb-dev.com/</a>. Continued use of the App after an update means you accept the revised policy. If you do not agree, stop using the App and delete your account / the App as needed.</p>
 
     <h2>10. Contact</h2>
     <p>Questions about this Privacy Policy or your data:</p>
@@ -184,7 +218,7 @@
     <p>Millstone<br />Distributed via the Apple App Store</p>
 
     <footer>
-      Hosted for App Store Connect. Source: Millstone privacy policy.
+      Hosted for App Store Connect · <a href="https://millstone.little-lamb-dev.com/">millstone.little-lamb-dev.com</a>
     </footer>
   </main>
 </body>
