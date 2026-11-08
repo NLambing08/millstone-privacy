@@ -6,7 +6,7 @@ Millstone (“the App”) is a Catholic rule-of-life and prayer app. This Privac
 
 This document is provided to help you meet App Store requirements. It is not legal advice. Consider having counsel review it before publishing.
 
-**Developer contact:** Use the support email listed for Millstone in App Store Connect.
+**Developer contact:** support@little-lamb-dev.com
 
 ---
 
@@ -132,7 +132,7 @@ We may update this Privacy Policy from time to time. The “Effective date” at
 
 Questions about this Privacy Policy or your data:
 
-Contact via the support email listed in App Store Connect for Millstone.
+**support@little-lamb-dev.com**
 
 Millstone / Nolan Lambing  
 Distributed via the Apple App Store
